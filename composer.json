@@ -1,20 +1,19 @@
 {
-    "name": "webklex/laravel-pdfmerger",
+    "name": "dhcmega/laravel-pdfmerger",
     "type": "library",
     "description": "Generic PDF merger for Laravel",
     "keywords": [
-        "webklex",
+        "dhcmega",
         "laravel",
         "pdf",
         "merger",
         "pdfmerger"
     ],
-    "homepage": "https://github.com/webklex/pdfmerger",
+    "homepage": "https://github.com/dhcmega/pdfmerger",
     "license": "MIT",
     "authors": [
         {
-            "name": "Malte Goldenbaum",
-            "email": "github@webklex.com",
+            "name": "Diego Helmann",
             "role": "Developer"
         }
     ],
@@ -31,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Webklex\\PDFMerger\\": "src/PDFMerger"
+            "Dhcmega\\PDFMerger\\": "src/PDFMerger"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Webklex\\PDFMerger\\Test\\": "tests"
+            "Dhcmega\\PDFMerger\\Test\\": "tests"
         }
     },
     "scripts": {
