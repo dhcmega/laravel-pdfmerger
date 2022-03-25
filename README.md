@@ -11,7 +11,7 @@
 Via Composer
 
 ``` bash
-$ composer require webklex/laravel-pdfmerger
+$ composer require dhcmega/laravel-pdfmerger
 ```
 
 ## Setup
@@ -21,12 +21,12 @@ Add the service provider to the providers array in `config/app.php`.
 ``` php
 'providers' => [
     ...
-    Webklex\PDFMerger\Providers\PDFMergerServiceProvider::class
+    Dhcmega\PDFMerger\Providers\PDFMergerServiceProvider::class
 ],
 
 'aliases' => [
     ...
-    'PDFMerger' => Webklex\PDFMerger\Facades\PDFMergerFacade::class
+    'PDFMerger' => Dhcmega\PDFMerger\Facades\PDFMergerFacade::class
 ]
 ```
 
@@ -34,12 +34,12 @@ Add the service provider to the providers array in `config/app.php`.
 A basic usage example:
 
 ``` php
-use Webklex\PDFMerger\Facades\PDFMergerFacade as PDFMerger;
+use Dhcmega\PDFMerger\Facades\PDFMergerFacade as PDFMerger;
 
 $oMerger = PDFMerger::init();
 
-$oMerger->addPDF('/path/to/project/vendors/webklex/laravel-pdfmerger/src/PDFMerger/examples/pdf_one.pdf', [2]);
-$oMerger->addPDF('/path/to/project/vendors/webklex/laravel-pdfmerger/src/PDFMerger/examples/pdf_two.pdf', 'all');
+$oMerger->addPDF('/path/to/project/vendors/dhcmega/laravel-pdfmerger/src/PDFMerger/examples/pdf_one.pdf', [2]);
+$oMerger->addPDF('/path/to/project/vendors/dhcmega/laravel-pdfmerger/src/PDFMerger/examples/pdf_two.pdf', 'all');
 
 $oMerger->merge();
 $oMerger->save('merged_result.pdf');
@@ -49,7 +49,7 @@ $oMerger->save('merged_result.pdf');
 ...add raw content data:
 
 ``` php
-$oMerger->addString(file_get_contents('/path/to/project/vendors/webklex/laravel-pdfmerger/src/PDFMerger/examples/pdf_two.pdf'), [1]);
+$oMerger->addString(file_get_contents('/path/to/project/vendors/dhcmega/laravel-pdfmerger/src/PDFMerger/examples/pdf_two.pdf'), [1]);
 
 ```
 
@@ -104,27 +104,27 @@ $ composer test
 
 ## Security
 
-If you discover any security related issues, please email github@webklex.com instead of using the issue tracker.
+If you discover any security related issues, please email github@dhcmega.com instead of using the issue tracker.
 
 ## Credits
 
-- [Webklex][link-author]
+- [Dhcmega][link-author]
 - All Contributors
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/Webklex/laravel-pdfmerger.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/Dhcmega/laravel-pdfmerger.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/Webklex/translator/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/Webklex/laravel-pdfmerger.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/Webklex/laravel-pdfmerger.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/Webklex/laravel-pdfmerger.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/Dhcmega/translator/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/Dhcmega/laravel-pdfmerger.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/Dhcmega/laravel-pdfmerger.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/Dhcmega/laravel-pdfmerger.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/Webklex/laravel-pdfmerger
-[link-travis]: https://travis-ci.org/Webklex/laravel-pdfmerger
-[link-scrutinizer]: https://scrutinizer-ci.com/g/Webklex/laravel-pdfmerger/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/Webklex/laravel-pdfmerger
-[link-downloads]: https://packagist.org/packages/Webklex/laravel-pdfmerger
-[link-author]: https://github.com/webklex
+[link-packagist]: https://packagist.org/packages/Dhcmega/laravel-pdfmerger
+[link-travis]: https://travis-ci.org/Dhcmega/laravel-pdfmerger
+[link-scrutinizer]: https://scrutinizer-ci.com/g/Dhcmega/laravel-pdfmerger/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/Dhcmega/laravel-pdfmerger
+[link-downloads]: https://packagist.org/packages/Dhcmega/laravel-pdfmerger
+[link-author]: https://github.com/dhcmega
